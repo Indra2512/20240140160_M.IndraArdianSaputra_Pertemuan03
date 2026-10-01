@@ -1,48 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asisten AI untuk UMKM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Web Form</h1>
-        <p>Selamat datang di web Rental Kamera </p>
+
+    <!-- Header & Navigasi -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">AI UMKM</a>
+            <nav class="nav">
+                <a href="#hero">Beranda</a>
+                <a href="#fitur">Fitur</a>
+                <a href="#formdata">Konsultasi</a>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="">Profile</a>
-    </nav>
-    <section id="profile">
-        <h2>this INI WEB!! Profile</h2>
-        <p>Bissmillah</p>
-    </section>
-    <form id="formdata" action="#">
-        <legend>Masukkan Data Diri</legend>
-        <label for="Nama">masukkan nama</label>
-        <input type="text" id="nama" name="nama">
-        <label for="Alamat">masukkan alamat</label>
-        <input type="text" id="alamat" name="alamat">
-        <label for="angkatan">masukkan angkatan</label>
-        <input type="text" id="angkatan" name="angkatan">
-        <fieldset id="Jenis Kelamin">
-            <legend>jenis kelamin</legend>
-            <input type="radio" name="pria" id="pria">
-            <label for="pria">pria</label>
-            <input type="radio" name="wanita" id="wanita">
-            <label for="wanita">wanita</label>
-        </fieldset>
 
-        <fieldset>
-            <legend>Hobi</legend>
-            <label for="Mancing">Mancing</label>
-            <input type="checkbox" id="Mancing" name="Hobi" value="Mancing">
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero container">
+            <h1>Asisten AI untuk Kemajuan UMKM</h1>
+            <p>Solusi cerdas untuk membantu otomatisasi dan pengembangan usaha Anda secara efisien.</p>
+        </section>
 
-            <label for="Berenang">Berenang</label>
-            <input type="checkbox" id="Berenang" name="Hobi" value="Berenang">
-        </fieldset>
-        <img src="https://id.pngtree.com/free-backgrounds-photos/wallpaper-pemandangan-jepang" alt="ini hanya sebuah gambar random">
-    </form>
+        <!-- Fitur Section (3 Kolom Grid) -->
+        <section id="fitur" class="container">
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Otomatisasi Chat</h3>
+                    <p>Layanan pelanggan otomatis berbasis AI untuk menjawab pertanyaan konsumen 24/7.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Analisis Pasar</h3>
+                    <p>Memprediksi tren penjualan produk UMKM berdasarkan data pasar secara akurat.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Rekomendasi Harga</h3>
+                    <p>Menentukan strategi harga optimal agar produk tetap bersaing dan menguntungkan.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="container form-section">
+            <h2>Form Pendaftaran & Konsultasi</h2>
+            <form id="formdata" action="#" class="consult-form">
+                
+                <fieldset class="form-group-box">
+                    <legend>Data Pemilik Usaha</legend>
+                    <div class="form-group">
+                        <label for="nama">Masukkan Nama</label>
+                        <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Masukkan Alamat</label>
+                        <input type="text" id="alamat" name="alamat" placeholder="Alamat lengkap usaha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="angkatan">Masukkan Angkatan / Tahun</label>
+                        <input type="number" id="angkatan" name="angkatan" placeholder="Contoh: 2024" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group-box">
+                    <legend>Jenis Kelamin</legend>
+                    <div class="radio-group">
+                        <input type="radio" name="jenis_kelamin" id="pria" value="pria" required>
+                        <label for="pria">Pria</label>
+
+                        <input type="radio" name="jenis_kelamin" id="wanita" value="wanita">
+                        <label for="wanita">Wanita</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group-box">
+                    <legend>Bidang Kategori Usaha / Hobi</legend>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="mancing" name="hobi" value="Mancing">
+                        <label for="mancing">Kuliner / Mancing</label>
+
+                        <input type="checkbox" id="berenang" name="hobi" value="Berenang">
+                        <label for="berenang">Fashion / Berenang</label>
+                    </div>
+                </fieldset>
+
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Ilustrasi AI UMKM" class="responsive-img">
+                </div>
+
+                <button type="submit" class="button">Kirim Data</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Asisten AI UMKM. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
