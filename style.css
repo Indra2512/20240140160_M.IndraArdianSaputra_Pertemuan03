@@ -181,5 +181,35 @@ header-container {
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    
+    align-self: flex-start;
+}
+
+.button:hover,
+.button:focus {
+    opacity: 0.85;
+    outline: 2px solid var(--Primary);
+}
+
+.footer {
+    text-align:center;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    color: #6c757d;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+}
+
+@media (max-width: 800px) {
+    .site-header .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        width: 100%;
+    }
 }
